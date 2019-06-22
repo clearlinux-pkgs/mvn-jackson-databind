@@ -4,17 +4,23 @@
 #
 Name     : mvn-jackson-databind
 Version  : 2.1.5
-Release  : 1
-URL      : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.jar
-Source0  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.jar
-Source1  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.pom
+Release  : 2
+URL      : https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.1.5.tar.gz
+Source0  : https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.1.5.tar.gz
+Source1  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.jar
+Source2  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-jackson-databind-data = %{version}-%{release}
 
 %description
-No detailed description available
+# Overview
+This project contains the general-purpose data-binding functionality
+and tree-model for [Jackson Data Processor](http://wiki.fasterxml.com/JacksonHome)
+It builds on [core streaming parser/generator](/FasterXML/jackson-core) package,
+and uses [Jackson Annotations](/FasterXML/jackson-annotations) for configuration.
+More low-level details can be found from [Javadocs](http://fasterxml.github.com/jackson-databind/javadoc/2.1.1/).
 
 %package data
 Summary: data components for the mvn-jackson-databind package.
@@ -30,10 +36,10 @@ data components for the mvn-jackson-databind package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.5
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.5
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.5
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.5
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.5
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.5
 
 
 %files
