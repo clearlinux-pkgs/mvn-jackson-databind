@@ -4,7 +4,7 @@
 #
 Name     : mvn-jackson-databind
 Version  : 2.1.5
-Release  : 8
+Release  : 9
 URL      : https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.1.5.tar.gz
 Source0  : https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.1.5.tar.gz
 Source1  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.jar
