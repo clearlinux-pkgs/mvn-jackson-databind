@@ -4,7 +4,7 @@
 #
 Name     : mvn-jackson-databind
 Version  : 2.1.5
-Release  : 9
+Release  : 10
 URL      : https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.1.5.tar.gz
 Source0  : https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.1.5.tar.gz
 Source1  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.1.5/jackson-databind-2.1.5.jar
@@ -33,10 +33,14 @@ Source23  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-da
 Source24  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.pom
 Source25  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar
 Source26  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.pom
+Source27  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar
+Source28  : https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-jackson-databind-data = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 # Overview
@@ -138,6 +142,12 @@ cp %{SOURCE25} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7
 cp %{SOURCE26} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8
+cp %{SOURCE27} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8
+cp %{SOURCE28} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -170,3 +180,5 @@ cp %{SOURCE26} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/
 /usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.pom
 /usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar
 /usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.pom
+/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar
+/usr/share/java/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.pom
